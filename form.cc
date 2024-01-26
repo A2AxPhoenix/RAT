@@ -10,16 +10,18 @@
 #include <unordered_set>
 using namespace std;
 
-
+// Simple PODs for groups in order to sort into a database.
 struct Group {
     int groupNumber;
     vector<string> studentsInGroup;
 };
 
+// Uppercaseify a string and change in main
 void uppercaseify(string &s) {
     for (char &c : s) c = toupper(c);
 }
 
+// Input checking and vetting input
 void error_check(const string &s = "BAD INPUT!\n") {
     cout << s;
     exit(EXIT_FAILURE);
@@ -33,8 +35,8 @@ int main() {
     cout << "Please fill out each question about your experience with your group. Remember be honest, no one besides Kerney and Mencarelli can see this form." << endl;
     cout << "NOTE: Your partners' grade will not be impacted based on your responses." << endl << endl << endl;
 
-    ifstream students("spring24_csci41.txt");
-    if (!students) throw runtime_error("Invalid file for students\n");
+    ifstream students("spring24_csci41.txt"); // This file is the Spring 2024 CSCI 41 class.
+    if (!students) throw runtime_error("Invalid file for students\n"); // if this file does not exist, throw.
 
     string env = getenv("HOME");
     string studentName;
