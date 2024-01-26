@@ -97,7 +97,7 @@ int main() {
     cout << "Here is the scale: " << endl;
     cout << "\t1 = Did way less than expected.\n";
     cout << "\t2 = Did slightly less than expected.\n"; 
-    cout << "\t3 = Did excatly what was expected.\n"; 
+    cout << "\t3 = Did what was expected.\n"; 
     cout << "\t4 = Did slightly more than expected.\n"; 
     cout << "\t5 = Did way more than expected.\n"; 
     cout << "Putting in a 5 for all your teammates or yourself will not raise your group's grade." << endl;
