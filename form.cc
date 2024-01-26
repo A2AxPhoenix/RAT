@@ -96,7 +96,7 @@ int main() {
     ofstream outs(studentName + ".txt");
     usleep(1'500'000);
     cout << "For the following questions, enter a number between 1-5." << endl;
-    cout << "Here is the scale: " << endl;
+    cout << "Here is the scale: " << endl; //Whatever
     cout << "\t1 = Did way less than expected.\n";
     cout << "\t2 = Did slightly less than expected.\n"; 
     cout << "\t3 = Did what was expected.\n"; 
