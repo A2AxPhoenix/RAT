@@ -1,4 +1,5 @@
 #include "Student.h"
+#include <cctype>
 #include <limits>
 #include <stdexcept>
 #include <string>
@@ -59,6 +60,12 @@ void Student::set_name(std::string newName) {
     }
     name = newName;
 }
+void Student::set_projectRole(std::string newProjectRole) {
+    for (char c : newProjectRole) 
+        if (isnumber(c))
+            throw std::logic_error("Tried to input a number for project role or within the string inputted.\nYou entered: " + newProjectRole + ". Enter a valid string.\n");
+    projectRole = newProjectRole;
+}
 void Student::add_groupmate(Student newGroupmate) { teammates.push_back(newGroupmate); }
 void Student::set_groupNumber(unsigned short newGroupNum) { 
     if (newGroupNum >= numeric_limits<unsigned short>::max()) throw overflow_error("Overflow error detected! You entered " + to_string(newGroupNum) + ".\nMaximum value is " + to_string(numeric_limits<unsigned short>::max()) + ".\n");
@@ -75,6 +82,7 @@ void Student::set_communicationRating(unsigned short newCommunicationRating) {
 void Student::add_comments(std::string newComment) { comments.push_back(newComment);  }
 
 bool Student::operator<(const Student &s) { return tie(groupNumber, name, projectRole, workRating, communicationRating) < tie(s.groupNumber, s.name, s.projectRole, s.workRating, s.communicationRating); }
+bool Student::operator==(const Student &s) { return name == s.name; } 
 
 istream& operator>>(std::istream& ins, Student &s) {
     ins >> s.name >> s.projectRole >> s.groupNumber;
