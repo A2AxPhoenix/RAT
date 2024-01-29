@@ -1,8 +1,8 @@
 CC = g++
-#CCFLAGS = -Wall -Wextra -std=c++2a -g -O3 -flto -fprofile-use
+# CCFLAGS = -Wall -Wextra -std=c++2a -g -O3 -flto -fprofile-use
 CCFLAGS = -Wall -Wextra -Wpedantic -pedantic-errors -Wno-unused-variable -Wno-unused-parameter -std=c++2b -g -O0 -fmax-errors=1 -Wfatal-errors -D_GLIBCXX_DEBUG -fsanitize=address -fsanitize=undefined
 HH = $(wildcard *.h)
-#SRC = $(wildcard *.cc)
+# SRC = $(wildcard *.cc)
 NORM = Student.cc form.cc
 CSL = Student.cc consolidator.cc
 BRK = Student.cc brackets.cc

@@ -62,7 +62,7 @@ void Student::set_name(std::string newName) {
 }
 void Student::set_projectRole(std::string newProjectRole) {
     for (char c : newProjectRole) 
-        if (isnumber(c))
+        if (isdigit(c))
             throw std::logic_error("Tried to input a number for project role or within the string inputted.\nYou entered: " + newProjectRole + ". Enter a valid string.\n");
     projectRole = newProjectRole;
 }
