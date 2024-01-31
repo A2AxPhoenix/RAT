@@ -35,8 +35,9 @@ int main() {
     cout << "Please fill out each question about your experience with your group. Remember be honest, no one besides Kerney and Mencarelli can see this form." << endl;
     cout << "NOTE: Your partners' grade will not be impacted based on your responses." << endl << endl << endl;
 
+    //ifstream students("/public/spring24_csci41.txt"); // This file is the Spring 2024 CSCI 41 class.
     ifstream students("spring24_csci41.txt"); // This file is the Spring 2024 CSCI 41 class.
-    if (!students) throw runtime_error("Invalid file for students\n"); // if this file does not exist, throw.
+    if (!students) throw runtime_error("Ensure the file for students is in your /public directory.\n"); // if this file does not exist, throw.
 
     string env = getenv("HOME");
     string studentName;
