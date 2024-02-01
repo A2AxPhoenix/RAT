@@ -5,7 +5,7 @@ import re
 # Define the base directory for user homes
 base_home_directory = "/home"
 # Define the destination directory
-destination_directory = "/home/public/RAT_Responses"
+destination_directory = "/home/RAT/RAT_Responses"
 # Ensure the destination directory exists
 if not os.path.exists(destination_directory):
     os.makedirs(destination_directory)
